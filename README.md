@@ -1,35 +1,86 @@
-# Mini Service Request Board Frontend
+# Mini Service Request Board – Frontend
 
-This is the Next.js frontend for the Mini Service Request Board assessment.
+This is the frontend application for the **Mini Service Request Board** technical assessment built for GlobalTNA.
 
-## Features
-- Home listing of job requests
-- Category filter
-- New job request form with client-side validation
-- Job detail page with status update and delete actions
-- Uses an external Express API via `NEXT_PUBLIC_API_URL`
+The application allows homeowners to create service requests and enables tradespeople to browse available jobs, view job details, update job statuses, and remove completed requests.
 
-## Tech stack
-- Next.js App Router
+The frontend is built using **Next.js App Router** and communicates with a separate **Node.js + Express REST API** backend.
+
+---
+
+# Features
+
+- View all service requests
+- Filter jobs by category
+- Create a new job request
+- View full job details
+- Update job request status
+- Delete job requests
+- Client-side form validation
+- Responsive and clean user interface
+
+---
+
+# Tech Stack
+
+- Next.js (App Router)
 - TypeScript
-- Atomic component structure
-- CSS-based styling
+- Tailwind CSS / CSS
+- Axios
+- REST API Integration
 
-## Local setup
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Add environment variables:
-   Create a `.env.local` file in the project root with:
-   ```env
-   NEXT_PUBLIC_API_URL=http://localhost:4000
-   ```
-3. Run the dev server:
-   ```bash
-   npm run dev
-   ```
+---
 
-## Notes
-- The frontend expects a separate Express backend on `NEXT_PUBLIC_API_URL`.
-- The backend should expose the REST endpoints under `/api/jobs`.
+# Project Structure
+
+```bash
+src/
+│
+├── app/
+│   ├── jobs/
+│   └── page.tsx
+│
+├── components/
+│
+├── lib/
+│
+├── types/
+│
+└── styles/
+```
+
+---
+
+# Local Setup
+
+## 1. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 2. Configure Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+---
+
+## 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+The frontend will run on:
+
+```text
+http://localhost:3000
+```
+
+---
